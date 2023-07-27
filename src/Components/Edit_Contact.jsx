@@ -36,7 +36,7 @@ function EditContact() {
 
 
         dispatch(editContact({ id, ...form }))
-
+        window.location.href = '/';
     }
 
     useEffect(() => {
@@ -46,10 +46,10 @@ function EditContact() {
     }, [])
 
     return (
-        <div className="w-1/2 mx-auto my-4 pt-16">
-            <h2 className="text-2xl font-bold mb-4">Edit Contact</h2>
+        <div className="w-1/2 md:w-1/2 lg:w-1/3 mx-auto my-24 md:pt-16 lg:pt-8 xl:pt-4">
+          
             <div className="mb-4">
-                <label className="block font-bold mb-2" htmlFor="first-name">
+                <label className="text-left block font-bold mb-2" htmlFor="first-name">
                     First Name
                 </label>
                 <input
@@ -62,7 +62,7 @@ function EditContact() {
                 />
             </div>
             <div className="mb-4">
-                <label className="block font-bold mb-2" htmlFor="last-name">
+                <label className="text-left block font-bold mb-2" htmlFor="last-name">
                     Last Name
                 </label>
                 <input
@@ -75,7 +75,7 @@ function EditContact() {
                 />
             </div>
             <div className="mb-4">
-                <label className="block font-bold mb-2" htmlFor="last-name">
+                <label className="text-left block font-bold mb-2" htmlFor="last-name">
                     Mobile Number
                 </label>
                 <input
@@ -88,7 +88,7 @@ function EditContact() {
                 />
             </div>
             <div className="mb-4">
-                <label className="block font-bold mb-2" htmlFor="status">
+                <label className="text-left block font-bold mb-2" htmlFor="status">
                     Status
                 </label>
                 <select
@@ -103,10 +103,10 @@ function EditContact() {
                 </select>
             </div>
             <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="bg-orange-600 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded"
                 onClick={handleSave}
             >
-                Save Contact
+                Update Contact
             </button>
         </div>
     );

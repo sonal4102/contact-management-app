@@ -11,11 +11,9 @@ function App() {
   return (
     <div className="App">
       <h1 className='z-50 w-full fixed shadow-sm shadow-slate-700 top-0 text-2xl text-zinc-50 bg-zinc-900 font-bold p-4'>
-      {
-  currentRoute === "/" ? 'Contact Management App' :
-  currentRoute === "/contact_form" ? "Add Your Contact" :
-  "Charts and Maps"
-}
+      {currentRoute === "/" ? 'Contact Management App' :
+         currentRoute === "/contact_form" ? "Add Your Contact" :
+         currentRoute.includes("/edit") ? "Edit Contact" : "Charts and Maps"}
 
       </h1>
       <div className='flex w-full '>

@@ -70,7 +70,7 @@ const Contacts = () => {
 
                             </div>
 
-                            <div className="flex justify-between my-4 flex-grow">
+                            <div className="flex justify-between my-4 ">
                             <Link to={`edit/${el.id}`} className="flex-grow">
   <button className="w-full rounded p-2 bg-amber-200 text-black">
     Edit
