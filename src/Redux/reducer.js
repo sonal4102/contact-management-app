@@ -4,28 +4,6 @@ import { ADD_CONTACT, EDIT_CONTACT, REMOVE_CONTACT } from './actionTypes';
 
 const initialState = {
   contacts:
-  //  [
-  //   {
-  //   id:1,
-  //   first_name:"Person1",
-  //   last_name:"Lastname1",
-  //   mob:"9122545553",
-  //   status:"active"
-  // },{
-  //   id:2,
-  //   first_name:"Person2",
-  //   last_name:"Lastname2",
-  //   mob:"9122545553",
-  //   status:'inactive'
-  // },{
-  //   id:3,
-  //   first_name:"Person3",
-  //   last_name:"Lastname3",
-  //   mob:"9122545553",
-  //   status:'active'
-  // }
-
-// ]||
 JSON.parse(localStorage.getItem("contacts"))||[],
 };
 
@@ -61,11 +39,6 @@ export default function reducer(state = initialState, action) {
           return {
         ...state,
         contacts: [
-          // ...state.contacts,
-          // {
-          //   id: state.contacts.length + 1,
-          //  ...action.payload
-          // },
         ...updatedContacts],
       };
     
@@ -79,7 +52,7 @@ export default function reducer(state = initialState, action) {
       let Contacts=JSON.parse(localStorage.getItem("contacts"))
      let updatedContacts=Contacts.filter((el)=>el.id!=action.payload.id)
       localStorage.setItem('contacts',JSON.stringify(updatedContacts))
-      // console.log(localStorage.getItem("contacts"))
+      
           return {
         ...state,
        
@@ -92,7 +65,7 @@ export default function reducer(state = initialState, action) {
 
       if(action.payload.first_name==""||action.payload.last_name==""||action.payload.mob==""){
         alert('Input Fields Can Not Be Leave Empty')
-        // flag=1
+   
         return state
       }
 
@@ -128,8 +101,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         contacts: state.contacts.map((el)=>{
           if(el.id==action.payload.id){
-            // console.log(action.payload)
-          //  return  el={...action.payload}
+        
 
             return el={...action.payload}
           }
