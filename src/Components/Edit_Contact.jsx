@@ -32,9 +32,6 @@ function EditContact() {
 
 
     function handleSave() {
-
-
-
         dispatch(editContact({ id, ...form }))
         window.location.href = '/';
     }
