@@ -70,15 +70,14 @@ const Contacts = () => {
 
                             </div>
 
-                            <div className="flex justify-between my-4">
-                                <Link to={`edit/${el.id}`}>
-                                    <button className="rounded p-2 bg-amber-200 text-black">
-
-                                        Edit
-                                    </button>
-                                </Link>
-                                <button onClick={() => togglePopup(el)} className="rounded p-2 bg-green-600 text-white">View</button>
-                                <button onClick={() => dispatch(removeContact(el.id))} className="rounded p-2 bg-red-600 text-white">Delete</button>
+                            <div className="flex justify-between my-4 flex-grow">
+                            <Link to={`edit/${el.id}`} className="flex-grow">
+  <button className="w-full rounded p-2 bg-amber-200 text-black">
+    Edit
+  </button>
+</Link>
+                                <button onClick={() => togglePopup(el)} className="flex-grow ml-2 rounded p-2 bg-green-600 text-white">View</button>
+                                <button onClick={() => dispatch(removeContact(el.id))} className="flex-grow ml-2 rounded p-2 bg-red-600 text-white">Delete</button>
                             </div>
                         </div>
                     })
