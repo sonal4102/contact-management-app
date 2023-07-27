@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
