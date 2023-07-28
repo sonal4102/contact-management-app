@@ -20,7 +20,6 @@ if (action.payload.first_name === "" || action.payload.last_name === "" || actio
   alert("Ohh You Missed Required Input, Please fill");
   flag = 1;
 } else {
-  // Check if the mob number is not 10 digits
   if (action.payload.mob.length !== 10 || isNaN(action.payload.mob)) {
     alert("Enter a valid 10-digit mobile number.");
     flag = 1;
