@@ -27,7 +27,6 @@ function ContactForm() {
     
     function handleSave() {
         dispatch(addContact(form))
-        window.location.href = '/';
     }
     
     return (
@@ -65,14 +64,14 @@ function ContactForm() {
                     Mobile Number
                 </label>
                 <input
-                    className="w-full border border-gray-400 p-2 rounded-md"
-                    id="last-name"
-                    type="number"
-                    name="mob"
-                    min='10'
-                    max='10'
-                    value={form.mob}
-                    onChange={handleChange}
+                   className="w-full border border-gray-400 p-2 rounded-md"
+                   id="last-name"
+                   type="text"  
+                   name="mob"
+                   inputmode="numeric" 
+                   pattern="[0-9]*" 
+                   value={form.mob}
+                   onChange={handleChange}
                 />
             </div>
             <div className="mb-4">

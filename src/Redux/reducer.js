@@ -14,25 +14,30 @@ export default function reducer(state = initialState, action) {
 
 
 
-      let flag=0
-       if(action.payload.first_name==""||action.payload.last_name==""||action.payload.mob==""){
-          alert('ohh You Missed Required Input , Please fill')
-        flag=1
+      let flag = 0;
+
+if (action.payload.first_name === "" || action.payload.last_name === "" || action.payload.mob === "") {
+  alert("Ohh You Missed Required Input, Please fill");
+  flag = 1;
+} else {
+  // Check if the mob number is not 10 digits
+  if (action.payload.mob.length !== 10 || isNaN(action.payload.mob)) {
+    alert("Enter a valid 10-digit mobile number.");
+    flag = 1;
+  } else {
+    state.contacts.forEach((el) => {
+      if (el.first_name === action.payload.first_name && el.last_name === action.payload.last_name) {
+        alert("Name Already Exists In Contact");
+        flag = 1;
       }
-      else{
-     state.contacts.forEach((el)=>{
-        if(el.first_name==action.payload.first_name&&el.last_name==action.payload.last_name){
-            alert('Name Already Exist In Contact')
-            flag=1
-        }
-      
-      })
-      }
- 
+    });
+  }
+}
+
 
       if(!flag){
         alert('Contact Saved Successfully!!!')
-       
+        window.location.href = '/'
         let updatedContacts=JSON.parse(localStorage.getItem("contacts"))||[]
         updatedContacts.push({id:state.contacts.length+1,...action.payload})
         localStorage.setItem('contacts',JSON.stringify(updatedContacts))
@@ -40,6 +45,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         contacts: [
         ...updatedContacts],
+   
       };
     
     }
