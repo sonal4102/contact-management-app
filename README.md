@@ -6,7 +6,7 @@ This is a contact management app built using ReactJS, JavaScript, TailwindCSS, R
 
 https://contact-management-app-sonalsingh.vercel.app/
 
-*Pages and Functionality*
+*Pages and Functionality* :- 
 
 The app has two main pages:
 1. Contacts
@@ -15,7 +15,7 @@ This page allows you to manage your contacts. You can add a new contact by filli
 2. Charts and Maps
 This page displays COVID-19 data for different countries. It includes a line graph showing the cases fluctuations over time and a map with markers that indicate the country name, total number of active, recovered cases, and deaths in that particular country as a popup.
 
-*APIs Used*
+*APIs Used* :- 
 
 The app uses the following APIs to fetch data:
 
@@ -24,7 +24,7 @@ Country Specific data of cases: https://disease.sh/v3/covid-19/countries
 Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all
 
 
-*Technologies Used*
+*Technologies Used* :-
 
 The following technologies were used to build this app:
 ReactJS
@@ -34,7 +34,7 @@ React Router v6
 React Query
 Redux
 
-*Installation and Setup*
+*Installation and Setup* :-
 
 To run this app, follow these steps:
 Clone this repository: git clone https://github.com/sonal4102/contact-management-app.git
